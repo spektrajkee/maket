@@ -1,0 +1,190 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes Regular"), local("TTLakes-Regular"), url("../fonts/TTLakes-Regular.woff") format("woff"), url("../fonts/TTLakes-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes Medium"), local("TTLakes-Medium"), url("../fonts/TTLakes-Medium.woff") format("woff"), url("../fonts/TTLakes-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes Bold"), local("TTLakes-Bold"), url("../fonts/TTLakes-Bold.woff") format("woff"), url("../fonts/TTLakes-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes Black"), local("TTLakes-Black"), url("../fonts/TTLakes-Black.woff") format("woff"), url("../fonts/TTLakes-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+html {
+  font-family: "TT Lakes", sans-serif;
+}
+
+.repaired-brands__title {
+  background: linear-gradient(90deg, #f8f8f8 1.39%, #ffffff 100%);
+  padding: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #7e7e82;
+}
+.repaired-brands__content {
+  background: #f8f8f8;
+  padding-bottom: 34px;
+}
+.repaired-brands__container {
+  display: flex;
+  padding: 24px;
+}
+@media (min-width: 767px) {
+  .repaired-brands__container {
+    flex-wrap: wrap;
+    height: 200px;
+    overflow: hidden;
+    gap: 16px 24px;
+  }
+}
+.repaired-brands__container--open {
+  height: auto;
+}
+.repaired-brands__link {
+  display: flex;
+  width: 240px;
+  height: 72px;
+  padding: 0px 16px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  position: relative;
+}
+.repaired-brands__link::after {
+  content: url(../img/icons/go.svg);
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 767px) {
+  .repaired-brands__link {
+    width: 224px;
+  }
+}
+@media (min-width: 1120px) {
+  .repaired-brands__link {
+    width: 240px;
+  }
+}
+.repaired-brands__image {
+  align-self: center;
+}
+.repaired-brands__button {
+  display: none;
+  position: relative;
+  margin-left: 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1b1c21;
+  padding: 25px;
+  background-color: #f8f8f8;
+}
+.repaired-brands__button::before {
+  content: url("../img/icons/icon.svg");
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 767px) {
+  .repaired-brands__button {
+    display: block;
+  }
+}
+@media (min-width: 1608px) {
+  .repaired-brands__button {
+    display: none;
+  }
+}
+.repaired-brands__button--reverse::before {
+  transform: translateY(-50%) rotate(180deg);
+}
