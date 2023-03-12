@@ -1,0 +1,256 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes Regular"), local("TTLakes-Regular"), url("../fonts/TTLakes-Regular.woff") format("woff"), url("../fonts/TTLakes-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes Medium"), local("TTLakes-Medium"), url("../fonts/TTLakes-Medium.woff") format("woff"), url("../fonts/TTLakes-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes Bold"), local("TTLakes-Bold"), url("../fonts/TTLakes-Bold.woff") format("woff"), url("../fonts/TTLakes-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes Black"), local("TTLakes-Black"), url("../fonts/TTLakes-Black.woff") format("woff"), url("../fonts/TTLakes-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+html {
+  font-family: "TT Lakes", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.navigation-block {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+}
+.control__item:nth-child(2) {
+  flex: 1 0 auto;
+}
+.control__button {
+  background-color: white;
+  border-radius: 50%;
+  transition-property: filter, box-shadow;
+  transition-duration: 0.5s, 0.6s;
+}
+.control__button:hover {
+  box-shadow: 2px 2px 3px 1px black;
+  filter: contrast(400%);
+}
+
+.logo {
+  width: 97px;
+  height: 51px;
+  opacity: 1;
+  transition-duration: 0.6s;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.main-menu {
+  padding-top: 24px;
+  flex: 1 0 auto;
+}
+.main-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.main-menu__link {
+  font-size: 16px;
+  line-height: 24px;
+  color: #1b1c21;
+  font-weight: 500;
+  padding: 0px 24px;
+  position: relative;
+  transition-duration: 0.5s;
+  display: block;
+  border-radius: 5px;
+}
+.main-menu__link::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 32px;
+  background-color: #41f6d7;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: none;
+}
+.main-menu__link--active {
+  color: #7e7e82;
+}
+.main-menu__link--active::before {
+  display: block;
+}
+.main-menu__link:hover {
+  background-color: #d5d5d8;
+  box-shadow: inset 1px 1px 3px 2px #f1f1f1;
+}
+
+.wrapper {
+  padding: 32px 24px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+.contacts__menu {
+  display: flex;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+.contacts__menu-button {
+  background-color: white;
+  border-radius: 50%;
+  transition-duration: 0.3s;
+}
+.contacts__menu-button:hover {
+  box-shadow: 2px 2px 3px 1px black;
+  filter: contrast(400%);
+}
+.contacts__mail {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #1b1c21;
+  transition-duration: 0.5s;
+}
+.contacts__mail:hover {
+  color: #cacfd4;
+}
+.contacts__phone {
+  margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  color: #1b1c21;
+  transition-duration: 0.5s;
+}
+.contacts__phone:hover {
+  color: #cacfd4;
+}
+
+.menu-language {
+  display: flex;
+  gap: 7px;
+}
+.menu-language__link {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #1b1c21;
+  padding: 1px;
+  transition-duration: 0.3s;
+}
+.menu-language__link--active {
+  color: #7e7e82;
+}
+.menu-language__link:hover {
+  background-color: #bec7c3;
+  box-shadow: inset 1px 1px 3px 2px #f1f1f1;
+}
